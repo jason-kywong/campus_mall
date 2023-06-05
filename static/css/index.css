@@ -331,7 +331,7 @@ div.index .hotProduct .title a {
 }
 
 div.index .hotProduct .tab {
-    width: 683px;
+    width: 520px;
     height: 40px;
     line-height: 40px;
     float: left;
@@ -366,7 +366,7 @@ div.index .hotProduct .hotProductAd {
 }
 
 div.index .hotProduct .tabContent {
-    width: 950px;
+    width: 850px;
     float: left;
     padding-left: 5px;
     _padding-left: 2px;
@@ -374,14 +374,36 @@ div.index .hotProduct .tabContent {
 
 div.index .hotProduct .tabContent li {
     float: left;
-    margin-right: -1px;
-    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-bottom: 0px;
     _position: relative;
-    margin-left: 14px
+    margin-left: 0px;
+    padding: 10px 10px 0px 0px;
+
+}
+div.index .hotProduct .tabContent li{
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 0px;
+    _position: relative;
+    margin-left: 0px;
+
+    padding: 30px 30px 30px 30px;
+
+}
+div.index .hotProduct .tabContent li li{
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 0px;
+    _position: relative;
+    margin-left: 0px;
+    background-color: transparent;
+    padding: 10px 10px 0px 0px;
+
 }
 
 div.index .hotProduct .tabContent li:hover {
-    filter: alpha(opacity=70);
+    filter: alpha(opacity=10);
     -moz-opacity: 0.7;
     opacity: 0.7;
 }
@@ -423,7 +445,7 @@ div.index .newProduct .title a {
 }
 
 div.index .newProduct .tab {
-    width: 690px;
+    width: 520px;
     height: 40px;
     line-height: 40px;
     float: left;
@@ -456,7 +478,7 @@ div.index .newProduct .newProductAd {
 }
 
 div.index .newProduct .tabContent {
-    width: 950px;
+    width: 850px;
     float: left;
     padding-left: 5px;
     _padding-left: 2px;
@@ -464,11 +486,24 @@ div.index .newProduct .tabContent {
 
 div.index .newProduct .tabContent li {
     float: left;
-    margin-right: -1px;
-    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-bottom: 0px;
     _position: relative;
-    margin-left: 14px;
+    margin-left: 0px;
+    background-color: transparent;
+    padding: 30px 30px 30px 30px;
 }
+
+div.index .newProduct .tabContent li li {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 0px;
+    _position: relative;
+    margin-left: 0px;
+    background-color: transparent;
+    padding: 10px 10px 0px 0px;
+}
+
 
 div.index .newProduct .tabContent li:hover {
     filter: alpha(opacity=70);
@@ -683,23 +718,10 @@ i.material-icons {
     width: 95%;
     max-width: 1300px;
     margin: 0 auto;
+
 }
 
-ul.product_msg li {
-    margin: -5px 2px;
-}
 
-ul.product_msg li:last-child {
-    color: red;
-}
-
-ul.product_msg1 li {
-    margin: -5px 2px;
-}
-
-ul.product_msg1 li:last-child {
-    color: red;
-}
 
 .buy:hover {
     background: red;
@@ -950,4 +972,23 @@ animation: rotation 1.5s linear infinite;
 -moz-animation: rotation 1.5s linear infinite;
 -webkit-animation: rotation 1.5s linear infinite;
 -o-animation: rotation 1.5s linear infinite;
+}
+
+ul.product_msg li {
+    margin: -5px 2px 30px 30px;
+
+
+}
+
+ul.product_msg li:last-child {
+    color: red;
+}
+
+ul.product_msg1 li {
+    margin: -5px 2px;
+    margin-bottom: 2px;
+}
+
+ul.product_msg1 li:last-child {
+    color: red;
 }
