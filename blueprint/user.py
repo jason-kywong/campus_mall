@@ -8,13 +8,15 @@ from flask import Blueprint, views, render_template, request, jsonify, redirect,
 from flask_mail import Message
 from werkzeug.security import generate_password_hash, check_password_hash
 
+from flask import Blueprint
+user_dp = Blueprint("user", __name__, url_prefix='/user', template_folder="../templates/user")
+
 from app import qiniu_store
 from config import QINIU_URL
 from mail import send_mail
 from pojo import *
 from redis_cache import redis_cache
 
-user_dp = Blueprint("user", __name__, url_prefix='/user', template_folder="../templates/user")
 
 
 class loginUrl(views.MethodView):

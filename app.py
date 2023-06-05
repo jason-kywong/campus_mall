@@ -3,7 +3,6 @@ from apscheduler.schedulers.background import BackgroundScheduler
 from extend import db, qiniu_store
 import json
 from datetime import timedelta
-from blueprint.user import user_dp
 from blueprint.validate_code import validate_code
 from mail import send_mail
 import config
@@ -11,9 +10,13 @@ import datetime
 from pojo import *
 from redis_cache import redis_cache
 from blueprint.product import product_dp
-
+from blueprint.user import user_dp
 app = Flask(__name__)
 app.jinja_env.add_extension('jinja2.ext.loopcontrols')
+
+
+
+# from blueprint.user import user_dp
 app.register_blueprint(user_dp)
 app.register_blueprint(validate_code)
 app.register_blueprint(product_dp)
