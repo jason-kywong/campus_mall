@@ -361,6 +361,7 @@ def cancelOrder():
 
 @product_dp.route("/getClassify")
 def getClassify():
+    packge = request
     pageNum = request.args.get('pageNum')
     cid = request.args.get('cid')
     csid = request.args.get('csid')
@@ -382,17 +383,15 @@ def getClassify():
     if category is not None:
         for categorySecond_One in category.categoryseconds:
             csids.append(str(categorySecond_One.id))
-        page_all = Product.query.filter(Product.csid.in_(csids), Product.is_pass == 2).order_by(
-            Product.pdate.desc()).paginate(int(pageNum), 12, False)
+        page_all = Product.query.filter(Product.csid.in_(csids), Product.is_pass == 2).order_by(Product.pdate.desc()).paginate()
+        # page_all = Product.query.filter(Product.csid.in_(csids), Product.is_pass == 2).order_by(Product.pdate.desc()).paginate(int(pageNum), 12, False)
 
     if csid is not None:
-        page_all = Product.query.filter(Product.csid == str(csid), Product.is_pass == 2).order_by(
-            Product.pdate.desc()).paginate(int(pageNum), 12, False)
+        page_all = Product.query.filter(Product.csid == str(csid), Product.is_pass == 2).order_by(Product.pdate.desc()).paginate()
     if categorySecond is None and category is None:
-        page_all = Product.query.order_by(Product.pdate.desc(), Product.is_pass == 2).paginate(int(pageNum), 12, False)
+        page_all = Product.query.order_by(Product.pdate.desc(), Product.is_pass == 2).paginate()
     categorys = Category.query.all()
-    return render_template('classify.html', categorys=categorys, products=page_all.items, currentPage=page_all.page,
-                           pages=page_all.pages, categorySecond=categorySecond, category_my=category)
+    return render_template('classify.html', categorys=categorys, products=page_all.items, currentPage=page_all.page,pages=page_all.pages, categorySecond=categorySecond, category_my=category)
 
 
 @product_dp.route("/getCategorySecond")
