@@ -32,7 +32,7 @@
                 <div id="slider1" data-delay="3000" class="jSlider" data-loop="true" data-indicator="always">
                     {% for product in extend_products %}
                         <div>
-                            <a href="{{ url_for('product.detail',id=product["id"]) }}" target="_blank">
+                            <a href="{{ url_for('product.detail',id=product["id"]) }}" target="_blank" class = "lunbo_a">
                                 <img class="lunbo_img" title="{{ product['pname'] }}" src="{{ product['images'] }}"
                                      alt=""/>
                             </a>
