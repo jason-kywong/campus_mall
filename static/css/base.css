@@ -31,7 +31,7 @@ body {
 
 .main_show {
     background: #FFFFFF;
-    width: 60% !important;
+    width: 80% !important;
     height: 90%;
     margin: 0px auto;
     *zoom: 1;
@@ -49,7 +49,7 @@ body {
 }
 
 .adad_area img {
-    width: 18%;
+    width: 8%;
 }
 
 .footer {
@@ -61,7 +61,7 @@ body {
     flex-direction: column;
     position: fixed;
     top: 20%;
-    right: 6%;
+    right: 3%;
     color: #666;
 
     background-color: transparent;
