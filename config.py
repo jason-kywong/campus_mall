@@ -19,7 +19,7 @@ SQLALCHEMY_DATABASE_URI = "{}+{}://{}:{}@{}:{}/{}?charset=utf8".format(DIALECT, 
                                                                        DATABASE)
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 
-# qq邮箱配置
+# 发件邮箱配置
 
 MAIL_SERVER = 'smtp.163.com'
 MAIL_PROT = 25

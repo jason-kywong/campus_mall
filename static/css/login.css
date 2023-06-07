@@ -36,7 +36,7 @@ div.login th {
     text-align: right;
 }
 
-div.login .captcha {
+div.login .captcha_email {
     width: 130px;
     text-transform: uppercase;
     ime-mode: disabled;
