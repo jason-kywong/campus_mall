@@ -72,11 +72,8 @@
     </div>
 </div>
 <div class="easy_nav">
-    <div><a href="{{ url_for('product.getClassify',cid=5) }}">爆品类别</a></div>
     <div><a href="/user/userInfo?tab=2">我的发布</a></div>
     <div><a href="/user/userInfo?tab=3">我的订单</a></div>
-    <div><a href="{{ url_for('user.userInfo') }}">个人主页</a></div>
-    <div><a href="/user/userInfo?tab=1" target="_blank">购物车<span class="glyphicon glyphicon-shopping-cart"></span></a>
     </div>
     {% if user != null and 1 == user.identity %}
         <div><a href="/admin">待我审核</a></div>
