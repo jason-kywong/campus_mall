@@ -25,26 +25,29 @@ function getValidete() {
         time--
     }
 }
-function click_operate() {
-        var email = $("#email").val()
-        regex = /^\d{5,12}@[qQ][qQ]\.(com|cn)$/
-        if(regex.test(email)){
-            zlalert.alertInfo("验证码已发送，可能会有验证，请耐心等待！")
-            $.getJSON("/user/sendMail","email="+email.trim(),function (result) {
-                if(result.status != 200){
-                    zlalert.alertInfo(result.msg)
-                }
-                else{
-                    click_css()
-                }
-            })
-        }
-        else{
-            $("#email").focus()
-            zlalert.alertError('请输入正确的QQ邮箱')
 
-        }
+function click_operate() {
+    var email = $("#email").val();
+    var regex = /^[a-zA-Z0-9]{5,15}$/;
+    var suffix = "@tongji.edu.cn";
+
+    if (regex.test(email)) {
+        var fullEmail = email.trim() + suffix;
+        zlalert.alertInfo("验证码已发送，可能会有验证，请耐心等待！");
+
+        $.getJSON("/user/sendMail", "email=" + fullEmail, function(result) {
+            if (result.status != 200) {
+                zlalert.alertInfo(result.msg);
+            } else {
+                click_css();
+            }
+        });
+    } else {
+        $("#email").focus();
+        zlalert.alertError('请输入正确的tongji.edu.cn邮箱');
+    }
 }
+
 function click_css() {
 
         $("#getMailCode").unbind('click')

@@ -112,15 +112,22 @@ div.register #captchaImage{
     height: 26px;
     border: 1px solid #f5e8e8;
 }
+div.register #defaultblock{
+	width: 90px;
+    height: 26px;
+    line-height: 22px;
+    /*display: inline-block;*/
+    /*font-weight: bold;*/
+}
 div.register #getMailCode{
 	width: 90px;
     height: 26px;
     line-height: 22px;
-    border: 1px solid #f5e8e8;
     display: inline-block;
     font-weight: bold;
-    padding-left: 3px;
+    border: 1px solid #f5e8e8;
 }
+
 div.register #getMailCode a:hover{
     color: #E14961;
 }
