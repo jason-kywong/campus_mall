@@ -181,11 +181,11 @@ div.container .span8 {
 }
 
 div.container .span9 {
-	width: 350px;
+	width: 250px;
 }
 
 div.container .span10 {
-	width: 360px;
+	width: 400px;
 }
 
 div.container .span11 {
@@ -808,6 +808,16 @@ div.header .cart {
     padding-left: 30px;
     margin-bottom: 4px;
 	background: url(../images/common.gif) -210px -180px no-repeat;
+}
+div.easy_nav .cart {
+    height: 28px;
+    line-height: 28px;
+    _display: inline;
+    float: left;
+    padding-left: 30px;
+    margin-bottom: 4px;
+	margin-top: 10px;
+	background: url(../images/购物车.png);
 }
 
 div.header .phone {

@@ -60,17 +60,23 @@ body {
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 20%;
-    right: 3%;
+    top: 50%;
+    right: 2%;
     color: #666;
 
     background-color: transparent;
 }
+.easy_nav img{
+    margin-left: 10px;
+    max-width: 50px;
+    max-height: 50px;
+    display: block;
+}
 
 .easy_nav div {
     padding: 8px;
-    width: 60px;
-    height: 60px;
+    width: 120px;
+    height: 100px;
     text-align: center;
     line-height: 20px;
     font-size: 15px;
@@ -82,6 +88,7 @@ body {
     color: #D03A2B;
     cursor: pointer;
     text-decoration: none;
+
 }
 
 .header {

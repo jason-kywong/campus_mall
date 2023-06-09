@@ -72,8 +72,17 @@
     </div>
 </div>
 <div class="easy_nav">
-    <div><a href="/user/userInfo?tab=2">我的发布</a></div>
-    <div><a href="/user/userInfo?tab=3">我的订单</a></div>
+    <div class="cart" title="去购物结算">
+        <a href="/user/userInfo?tab=1">
+            <img src="../static/images/购物车.png" class = "easy_nav_img"></img>
+        </a>
+        <a href="/user/userInfo?tab=1">购物车</a>
+
+        {% if last_time != null and last_time != "" %}
+            <div class="last_time">{{ last_time }}</div>
+        {% endif %}
+
+    </div>
     </div>
     {% if user != null and 1 == user.identity %}
         <div><a href="/admin">待我审核</a></div>
