@@ -1,5 +1,5 @@
 .ta_01 h2 {
-    color: #E14961;
+    color: #3164af;
     font-size: 30px;
     font-family: "Microsoft YaHei", "宋体", "Segoe UI", "Lucida Grande", Helvetica, Arial, sans-serif, FreeSans, Arimo;
 }
@@ -15,7 +15,7 @@
 }
 
 .container td > tr > a.open_detail:hover {
-    color: #E14961;
+    color: #3164af;
 }
 
 .container td {
@@ -46,16 +46,16 @@ div.container {
 }
 
 .btn-success:hover {
-    background: #E14961 !important;
+    color: #3164af; !important;
 }
 
 input#pname {
-    color: #E14961;
+    color: #3164af;
     font-weight: bolder;
 }
 
 textarea#pDesc {
-    color: #E14961;
+    color: #3164af;
     font-weight: bolder;
 }
 
