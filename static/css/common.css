@@ -124,7 +124,7 @@ textarea {
 /* ---------- Grid ---------- */
 
 div.container {
-	width: 950px;
+	width: 1600px;
 	margin: 0px auto;
 	*zoom: 1;
 	color: #666666;
@@ -1083,6 +1083,8 @@ div.pagination .pageBreak {
 }
 .logo_nyist{
 	width: 140px;
+	margin-left: -150px;
+	position: absolute;
 }
 .user_info{
 	margin-left: 5px;
