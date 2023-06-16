@@ -9,9 +9,27 @@ a {
     text-decoration: none;
 }
 
+/*body {*/
+/*    !*background-image: url("/static/img/background.webp");*!*/
+/*    background-color: #f2f2f2;*/
+/*}*/
 body {
-    background: #F4F4F4 !important;
+  animation: backgroundAnimation 10s infinite;
+  background-color: red;
+  transition: background-color 0.5s ease-in-out;
 }
+
+
+@keyframes backgroundAnimation {
+  0% { background-color: #ff8080; } /* Lighter shade of red */
+  25% { background-color: #8080ff; } /* Lighter shade of blue */
+  50% { background-color: #80ff80; } /* Lighter shade of green */
+  75% { background-color: #ffff80; } /* Lighter shade of yellow */
+  100% { background-color: #ffbf80; } /* Lighter shade of orange */
+}
+
+
+
 
 .my_hr{
     border-bottom: 3px solid #3164af !important;
@@ -80,7 +98,6 @@ body {
     text-align: center;
     line-height: 20px;
     font-size: 15px;
-    border-bottom: 1px solid #F4F4F4;
     background-color: transparent;
 }
 

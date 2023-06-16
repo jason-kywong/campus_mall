@@ -331,7 +331,7 @@ div.index .hotProduct .title a {
 }
 
 div.index .hotProduct .tab {
-    width: 640px;
+    width: 680px;
     height: 40px;
     line-height: 40px;
     float: left;
@@ -378,7 +378,7 @@ div.index .hotProduct .tabContent li{
     margin-right: 20px;
     margin-bottom: 0px;
     _position: relative;
-    margin-left: 0px;
+    margin-left: 20px;
 
     padding: 30px 50px 50px 30px;
 
@@ -438,7 +438,7 @@ div.index .newProduct .title a {
 }
 
 div.index .newProduct .tab {
-    width: 640px;
+    width: 680px;
     height: 40px;
     line-height: 40px;
     float: left;
@@ -482,7 +482,7 @@ div.index .newProduct .tabContent li {
     margin-right: 20px;
     margin-bottom: 0px;
     _position: relative;
-    margin-left: 0px;
+    margin-left: 20px;
     background-color: transparent;
     padding: 30px 50px 50px 30px;
 }
@@ -876,6 +876,11 @@ i.material-icons {
     width: 60px;
     border-radius: 50%;
 }
+.ad_img{
+    margin-top: 30px;
+    margin-left: -10px;
+}
+
 
 .user_other1 {
     align-items: center;

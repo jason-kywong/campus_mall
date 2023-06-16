@@ -163,3 +163,21 @@ function huojian() {
                 $("html,body").animate({scrollTop: 0}, "slow");
         });
 }
+const body = document.body;
+const colors = ['#ff8080', '#8080ff', '#80ff80', '#ffff80', '#ffbf80'];
+
+let currentIndex = 0;
+let timeoutId;
+
+function changeBackground() {
+  body.style.backgroundColor = colors[currentIndex];
+  currentIndex = (currentIndex + 1) % colors.length;
+  timeoutId = setTimeout(changeBackground, 5000);
+}
+
+function stopBackgroundChange() {
+  clearTimeout(timeoutId);
+}
+
+changeBackground();
+
