@@ -21,7 +21,7 @@ body {
 	_height: 100%;
 	font: 12px tahoma, Arial, Verdana, sans-serif;
 	color: #666666;
-	background-color: #ffffff;
+	background-color: #e01212;
 	/*_background-image: url(about: blank);*/
 	_background-attachment: fixed;
 }
@@ -124,12 +124,13 @@ textarea {
 /* ---------- Grid ---------- */
 
 div.container {
-	width: 1600px;
+	width: 1000px;
 	margin: 0px auto;
 	*zoom: 1;
 	color: #666666;
     text-decoration: none;
 	font: 12px tahoma, Arial, Verdana, sans-serif;
+	background-color: #ffffff;
 }
 
 div.container:after {

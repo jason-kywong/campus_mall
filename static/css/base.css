@@ -21,11 +21,11 @@ body {
 
 
 @keyframes backgroundAnimation {
-  0% { background-color: #ff8080; } /* Lighter shade of red */
-  25% { background-color: #8080ff; } /* Lighter shade of blue */
-  50% { background-color: #80ff80; } /* Lighter shade of green */
-  75% { background-color: #ffff80; } /* Lighter shade of yellow */
-  100% { background-color: #ffbf80; } /* Lighter shade of orange */
+  0% { background-color: rgba(255, 128, 128, 0.36); } /* Lighter shade of red */
+  25% { background-color: rgba(128, 128, 255, 0.36); } /* Lighter shade of blue */
+  50% { background-color: rgba(128, 255, 128, 0.26); } /* Lighter shade of green */
+  75% { background-color: rgba(255, 255, 128, 0.16); } /* Lighter shade of yellow */
+  100% { background-color: rgba(255, 191, 128, 0.29); } /* Lighter shade of orange */
 }
 
 

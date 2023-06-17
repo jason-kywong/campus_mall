@@ -181,3 +181,11 @@ function stopBackgroundChange() {
 
 changeBackground();
 
+
+// function changeBackgroundColor() {
+//   var colors = ["#9c9c9c", "#ff0000", "#00ff00", "#0000ff"]; // Add more colors as needed
+//   var randomColor = colors[Math.floor(Math.random() * colors.length)];
+//   document.querySelector('.container').style.backgroundColor = randomColor;
+// }
+//
+// setInterval(changeBackgroundColor, 2000); // Change color every 2 seconds
