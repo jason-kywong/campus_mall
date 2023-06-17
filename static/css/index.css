@@ -331,7 +331,7 @@ div.index .hotProduct .title a {
 }
 
 div.index .hotProduct .tab {
-    width: 680px;
+    width: 670px;
     height: 40px;
     line-height: 40px;
     float: left;
@@ -438,7 +438,7 @@ div.index .newProduct .title a {
 }
 
 div.index .newProduct .tab {
-    width: 680px;
+    width: 670px;
     height: 40px;
     line-height: 40px;
     float: left;
@@ -647,6 +647,7 @@ a:hover, a:focus {
     line-height: 30px;
     letter-spacing: 1px;
     position: relative;
+
 }
 
 @media only screen and (max-width: 479px) {
@@ -712,6 +713,7 @@ i.material-icons {
     width: 95%;
     max-width: 1000px;
     margin: 0 auto;
+
 
 
 }
