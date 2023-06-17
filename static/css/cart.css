@@ -31,8 +31,8 @@ a:hover{
 .cartMain{
     background: #eae8e8;
     position: relative;
-    width: 100%;
-    min-width: 104%;
+    width: 80%;
+    min-width: 80%;
     max-width: 950px;
     margin: 40px auto 0px;
     padding: 0px 0px 50px;
