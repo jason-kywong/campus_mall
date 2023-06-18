@@ -36,7 +36,7 @@ REDIS_PORT = 6379
 
 # 七牛云配置
 ALLOWED_EXT=set(['png', 'jpg','jpeg','bmp','gif'])
-QINIU_ACCESS_KEY = "AaPT2jsEfuGggQFChS4I-IVTgO55ai0PARJL0gBC"
-QINIU_SECRET_KEY = "UxgbGBaIqPMJXAkjWUhdUu9xeXTCRoSFENdAEFLy"
-QINIU_BUCKET_NAME = 'download'
-QINIU_URL = "rvpkzi39r.hd-bkt.clouddn.com"
+QINIU_ACCESS_KEY = "VimNicRPXX26IBrlzm8L0jfYZlW8hkDy7m6rI-Ik"
+QINIU_SECRET_KEY = "UT6U7JX6G2SrqecagTUh_lzFN--RB6lx6XzGGV6V"
+QINIU_BUCKET_NAME = 'tongjimall'
+QINIU_URL = "http://rvpkzi39r.hd-bkt.clouddn.com"
