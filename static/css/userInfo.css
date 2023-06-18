@@ -183,7 +183,7 @@ table tr:hover{
     margin-right: 10px;
 }
 .null_page{
-    width: 100%;
+    width: 80%;
     height: 700px;
     margin-left: 100px !important;
     background: url(/static/img/null.png) !important;
@@ -201,7 +201,8 @@ table.xs_table img{
 }
 table.xs_table{
     margin-top: 30px;
-    width: 100%;
+    width: 80%;
+    margin-left: -40px;
     border: 1px solid #dddddd;
 }
 span.xsing{
