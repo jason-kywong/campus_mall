@@ -45,7 +45,6 @@ $(function () {
             } else {
                 zlalert.alertError('出现错误！', function () {
                     window.location.reload();
-
                 })
             }
         })

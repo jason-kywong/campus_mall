@@ -243,8 +243,7 @@ def resetPassword():
             user.password = generate_password_hash(random_sample)
             db.session.commit()
             msg = Message(subject="同济大学二手交易平台找回密码", recipients=[email])
-            msg.html = "<b><img src='http://127.0.0.1:5000/static/images/nyist.png" \
-                       "style='width:260px'></b><br><b>同济大学二手平台重置你的密码为:" \
+            msg.html = "<b>style='width:260px'></b><br><b>同济大学二手平台重置你的密码为:" \
                        "<font color='red'>" + random_sample + "</font>,建议登录之后修改密码，谢谢你的使用！<b>"
             send_mail.send(msg)
             return jsonify({"msg": "", 'status': "200"})
