@@ -15,7 +15,7 @@ class User(db.Model):
     create_time = db.Column(db.DateTime, default=datetime.now)
     addr = db.Column(db.String(255), nullable=True)
     is_ok = db.Column(db.Integer, default=1)
-    img_url = db.Column(db.Text, default="http://www.2cto.com/uploadfile/2014/0321/20140321081401358.jpg",
+    img_url = db.Column(db.Text, default="http://rvpkzi39r.hd-bkt.clouddn.com/d6e680c6100e11ee81fadc1ba1d887da.jpg",
                         nullable=True)
     scores = db.Column(db.Integer, default=0)  # 用户积分
     identity = db.Column(db.Integer, default=0)  # 0普通用户，1会员
