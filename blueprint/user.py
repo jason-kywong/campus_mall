@@ -46,7 +46,7 @@ class loginUrl(views.MethodView):
         else:
             if str(is_mt) == '0':
                 return jsonify({"status": "500", "msg": "验证码错误", "error_pos": "#code_msg"})
-            return render_template("loginUI.html", code_msg='验证码错误')
+            return render_template("loginUI.html", code_msg='验证错误')
 
 
 user_dp.add_url_rule('/login', endpoint='login', view_func=loginUrl.as_view('login'))
