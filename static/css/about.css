@@ -31,12 +31,22 @@
 }
 
 .about_small {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
 }
 
 .about_desc {
-    font-size: 16px;
+    font-size: 20px;
+}
+
+.about_desc_red {
+    font-size: 20px;
+    color: #be1852;
+}
+
+.about_desc_pu{
+    font-size: 20px;
+    color: #102c65;
 }
 
 .has_join {
@@ -68,4 +78,20 @@
 
 .about_area .ad_area img{
     width: 100%;
+}
+
+.team-member {
+  display: inline-block;
+  text-align: center;
+  margin: 20px;
+}
+
+.team-member img {
+  width: 200px;
+  border-radius: 50%;
+}
+
+.team-member p {
+  font-size: 16px;
+  margin-top: 10px;
 }
