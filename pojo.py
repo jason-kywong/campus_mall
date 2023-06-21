@@ -26,7 +26,12 @@ class User(db.Model):
         user_json["img_url"] = self.img_url
         user_json["username"] = self.username
         return user_json
-
+    def user_json_mail(self):
+        user_json = {}
+        user_json["id"] = self.id
+        user_json["email"] = self.email
+        user_json["phone"] = self.phone
+        return user_json
 
 # 一级类别
 

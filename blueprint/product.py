@@ -19,6 +19,7 @@ def detail():
     product = Product.query.get(pid)
     if product is None:
         return redirect(url_for('index'))
+    #增加点击计数，作为生成热门品的依据
     product.click_count = int(product.click_count) + 1
     db.session.commit()
     users = []
@@ -243,18 +244,35 @@ def repeat_check():
     return jsonify({"error": '0'})
 
 
+from flask_mail import Message
+from mail import send_mail
+
 # 通过
 @product_dp.route("/passItem")
 def passItem():
     id = request.args.get('id')
     products = Product.query.filter(Product.id == id).first()
+    suid = products.uid
+    seller = User.query.filter(User.id == suid).first()
     products.is_pass = 2
     db.session.commit()
     redis_cache.delete("productList1")
     redis_cache.delete("productList3")
-    return jsonify({"error": '0'})
+    email = seller.email
+    # email = "jasonhuang@tongji.edu.cn"
+    img = products.images
+    msg = Message(subject="商品已通过审核!", recipients=[email])
+    msg.html = "<b><img src='http://rvpkzi39r.hd-bkt.clouddn.com/ed9445d40f7f11eea5fcdc1ba1d887da.jpg' style='width:260px'></b>" \
+               "<br><b>同济大学二手交易平台很高兴通知您，您以下商品已通过审核：" \
+               "<br><br><font color='red'>" + products.pname + "</font></b>" \
+               "<br><br><br><b><img src= '" + products.images[:-1] + "' style='width:260px'></b>"
 
-    return jsonify({"error": "1"})
+    send_mail.send(msg)
+    # return jsonify({"msg": "", 'status': "200"})
+
+    return jsonify({"error": '0'})
+    return jsonify({"error": '1'})
+    # return jsonify({"error": "1"})
 
 
 # 驳回
@@ -262,8 +280,26 @@ def passItem():
 def no_pass():
     id = request.args.get('id')
     products = Product.query.filter(Product.id == id).first()
+    suid = products.uid
+    seller = User.query.filter(User.id == suid).first()
     products.is_pass = 1
     db.session.commit()
+    email = seller.email
+    # email = "jasonhuang@tongji.edu.cn"
+    img = products.images
+    msg = Message(subject="商品未能通过审核!", recipients=[email])
+    msg.html = "<b><img src='http://rvpkzi39r.hd-bkt.clouddn.com/ed9445d40f7f11eea5fcdc1ba1d887da.jpg' style='width:260px'></b><br><br>" \
+               "<b>同济大学二手交易平台很遗憾地通知您，您以下商品未能通过审核，请确保你的商品符合平台规范：</b><br><br>"  \
+               "<font color='red'>" + products.pname + "</font></b><br><br>" \
+               "<b><img src='" + products.images[:-1] + "' style='width:260px'></b>"\
+               "<b>校园二手交易平台商品规范：</b><br><br>" \
+               "1. 商品描述：准确、详细地描述商品的名称、品牌、型号、规格、成色、功能、特点等关键信息。<br>" \
+               "2. 商品状况：清晰说明商品的使用状况、维修历史、损坏或缺陷情况，以及是否有附属配件或原包装。<br>" \
+               "3. 价格设置：合理定价，参考市场价、商品新旧程度、功能完好程度、附属配件等因素，公开透明地标示商品价格。<br>" \
+               "4. 图片展示：提供清晰、真实的商品图片，包括正面、背面、细节等多角度照片，以便买家准确了解商品外观。<br>" \
+               "5. 交易地点：指定交易地点，如校园内指定地点或公共场所，确保交易的安全和方便性。<br>" \
+               "6. 禁止物品：禁止交易如盗版软件、侵权商品、违禁品等非法物品，确保交易符合法律法规和校园规定。<br><br>"
+
     return jsonify({"error": '0'})
     return jsonify({"error": "1"})
 

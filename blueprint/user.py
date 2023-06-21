@@ -100,7 +100,8 @@ def sendMail():
         random_sample = ''.join(random_sample)
         redis_cache.set(email, str(random_sample))
         msg = Message(subject="同济大学二手交易平台动态码", recipients=[email])
-        msg.html = "<b><img src='http://qiniuyun.donghao.club/nyist.png' " \
+        msg.html = "<b><img src='http://rvpkzi39r.hd-bkt.clouddn.com/ed9445d40f7f11eea5fcdc1ba1d887da.jpg' " \
+                   "<b><img src='http://qiniuyun.donghao.club/nyist.png' " \
                    "style='width:260px'></b><br><b>同济大学二手交易平台注册动态码:" \
                    "<font color='red'>" + random_sample + "</font><b>"
         send_mail.send(msg)

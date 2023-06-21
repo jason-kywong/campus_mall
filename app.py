@@ -193,8 +193,8 @@ def not_foundPage(error):
 if __name__ == '__main__':
     app.run()
 
-scheduler = BackgroundScheduler()
-# 1个小时更新热门商品
-scheduler.add_job(hot_product, 'interval', seconds=1 * 60 * 60)
-scheduler.add_job(clear_redis, 'interval', seconds=30 * 60)
-scheduler.start()
+# scheduler = BackgroundScheduler()
+# # 1个小时更新热门商品
+# scheduler.add_job(hot_product, 'interval', seconds=1 * 60 * 60)
+# scheduler.add_job(clear_redis, 'interval', seconds=30 * 60)
+# scheduler.start()

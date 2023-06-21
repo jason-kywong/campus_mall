@@ -39,4 +39,4 @@ ALLOWED_EXT=set(['png', 'jpg','jpeg','bmp','gif'])
 QINIU_ACCESS_KEY = "VimNicRPXX26IBrlzm8L0jfYZlW8hkDy7m6rI-Ik"
 QINIU_SECRET_KEY = "UT6U7JX6G2SrqecagTUh_lzFN--RB6lx6XzGGV6V"
 QINIU_BUCKET_NAME = 'tongjimall'
-QINIU_URL = "http://qiniuyun.donghao.club/"
+QINIU_URL = "http://rvpkzi39r.hd-bkt.clouddn.com/"
