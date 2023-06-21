@@ -278,7 +278,7 @@ def passItem():
                "<br><br><font color='red'>" + products.pname + "</font></b>" \
                "<br><br><br><b><img src= '" + products.images[:-1] + "' style='width:260px'></b>"
 
-    send_mail.send(msg)
+    # send_mail.send(msg)
     # return jsonify({"msg": "", 'status': "200"})
 
     return jsonify({"error": '0'})

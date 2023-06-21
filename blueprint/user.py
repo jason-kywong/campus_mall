@@ -28,16 +28,11 @@ class loginUrl(views.MethodView):
         is_mt = request.form.get("is_mt")
         code = request.form.get("code")
         image = session.get("image")
-
-        if str(code).lower() == str(image).lower() or str(code).lower() =='tongjidaxue2023':
+        if str(code).lower() == str(image).lower():
             email = request.form.get("email")
             password = request.form.get("password")
             user = User.query.filter(User.email == email, User.is_ok == 1).first()
 
-            if str(code).lower() == 'tongjidaxue2023':
-                # 将新注册用户的 identity 字段置为 1，给予管理员身份
-                user.identity = 1
-                db.session.commit()
             if user is not None:
                 if check_password_hash(user.password, password):
                     session["uid"] = user.id
@@ -64,9 +59,14 @@ class registerUrl(views.MethodView):
 
     def post(self):
         code = request.form.get("code")
-        email = request.form.get("email")
-        random_sample_old = redis_cache.get(email).decode()
-        if random_sample_old.lower() == code.lower():
+        email = request.form.get("email") + "@tongji.edu.cn"
+        if str(code).lower() !='tongjidaxue2023':
+            random_sample_old = redis_cache.get(email).decode()
+        if str(code).lower() =='tongjidaxue2023' or random_sample_old.lower() == code.lower():
+            identity = 0
+            if str(code).lower() == 'tongjidaxue2023':
+                # 将新注册用户的 identity 字段置为 1，给予管理员身份
+                identity = 1
             username = request.form.get("username")
             password = request.form.get("password")
             email = request.form.get("email")
@@ -75,7 +75,7 @@ class registerUrl(views.MethodView):
             addr = request.form.get("addr")
             id = str(uuid.uuid1()).replace('-', '')
             user = User(id=id, username=username, password=generate_password_hash(password), email=email, name=name,
-                        phone=phone, addr=addr)
+                        phone=phone, addr=addr,identity = identity)
             db.session.add(user)
             db.session.commit()
             return redirect(url_for('user.login'))
@@ -105,8 +105,7 @@ def sendMail():
         random_sample = ''.join(random_sample)
         redis_cache.set(email, str(random_sample))
         msg = Message(subject="同济大学二手交易平台动态码", recipients=[email])
-        msg.html = "<b><img src='http://rvpkzi39r.hd-bkt.clouddn.com/ed9445d40f7f11eea5fcdc1ba1d887da.jpg' " \
-                   "<b><img src='http://qiniuyun.donghao.club/nyist.png' " \
+        msg.html = "<b><img src='http://rvpkzi39r.hd-bkt.clouddn.com/ed9445d40f7f11eea5fcdc1ba1d887da.jpg' style='width:260px " \
                    "style='width:260px'></b><br><b>同济大学二手交易平台注册动态码:" \
                    "<font color='red'>" + random_sample + "</font><b>"
         send_mail.send(msg)
