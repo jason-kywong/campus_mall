@@ -31,7 +31,7 @@ a:hover{
 .cartMain{
     background: #eae8e8;
     position: relative;
-    width: 80%;
+    width: 100%;
     min-width: 80%;
     max-width: 950px;
     margin: 40px auto 0px;
@@ -112,7 +112,7 @@ a:hover{
     display: block;
 }
 .order_lists{
-    width: 100%;
+    width: 130%;
     height: 130px;
     border-bottom: 1px solid #e7e7e7;
 }

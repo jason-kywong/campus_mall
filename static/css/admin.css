@@ -82,5 +82,9 @@ textarea#pDesc {
 }
 
 #product_img img {
-    width: 890px;
+    width: 500px;
+}
+
+div#product_img.container{
+    width:900px;
 }

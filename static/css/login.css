@@ -90,8 +90,13 @@ div.login .register dd a {
 .ad_area {
     width: 103%;
     border: 10px solid #F4F4F4;
+    max-height: 550px;
+    overflow: hidden;
 }
 
 .ad_area img {
     width: 100%;
+    /*clip: rect(200px, 0, 200px, 0);*/
+    /*position: absolute;*/
+    /*max-height: 500px;*/
 }
