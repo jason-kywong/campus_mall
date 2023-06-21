@@ -120,13 +120,24 @@ def add_product():
                 head_img = img_url
             i = i + 1
             img_urls += (img_url + "@")
-
     pname = request.form.get("pname")
     pDesc = request.form.get("pDesc")
     counts = request.form.get("counts")
     old_price = request.form.get("old_price")
     new_price = request.form.get("new_price")
+    # 判断字段是否为空，如果为空，则使用默认字段
+    if not pname:
+        pname = "默认商品"
+    if not pDesc:
+        pDesc = "默认商品"
+    if not counts:
+        counts = 1
+    if not old_price:
+        old_price = 100
+    if not new_price:
+        new_price = 80
     csid = request.form.get("csid")
+    #商品分类错误
     if csid is not None or csid != "":
         categorySecond = CategorySecond.query.get(csid)
         if categorySecond is None:
