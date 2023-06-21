@@ -20,7 +20,7 @@
 }
 .cropped {
 	position: absolute;
-    right: 300px;
+    right: -30px;
     top: 0;
     width: 200px;
     border: 1px #ddd solid;
