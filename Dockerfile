@@ -11,7 +11,7 @@ COPY . /app
 RUN pip install --no-cache-dir -r requirements.txt
 
 # 暴露端口（如果你的 Flask 应用程序使用了不同的端口，请相应修改）
-EXPOSE 5000
+EXPOSE 5010
 
 # 设置环境变量
 ENV FLASK_APP=your_flask_app.py

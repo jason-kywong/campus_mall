@@ -277,9 +277,11 @@ def provideOrders():
                                           product=shopCart.product)
                     orderItem.order = order
                     db.session.delete(shopCart)
+                    # db.session.add(orderItem)
                     db.session.commit()
         user.shop_time = None
         order.total_money = all_money
+        # db.session.add(order)
         db.session.commit()
         return jsonify({"error": "0", "oid": order.id})
     return jsonify({"error": "1"})
