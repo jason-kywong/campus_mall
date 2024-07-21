@@ -12,7 +12,7 @@ DRIVER = "pymysql"
 USERNAME = "root"
 PASSWORD = "Aa123456"
 HOST = "localhost"
-PORT = "3307"
+PORT = "3306"
 DATABASE = "new_shop"
 
 SQLALCHEMY_DATABASE_URI = "{}+{}://{}:{}@{}:{}/{}?charset=utf8".format(DIALECT, DRIVER, USERNAME, PASSWORD, HOST, PORT,
@@ -25,9 +25,9 @@ MAIL_SERVER = 'smtp.163.com'
 MAIL_PROT = 25
 MAIL_USE_TLS = True
 MAIL_USE_SSL = False
-MAIL_USERNAME = "18948289663@163.com"
-MAIL_DEFAULT_SENDER = "18948289663@163.com"
-MAIL_PASSWORD = "ADNJGBPMWOGYOFKI"
+MAIL_USERNAME = "yourmail@163.com"
+MAIL_DEFAULT_SENDER = "yourmail@163.com"
+MAIL_PASSWORD = "PASSWORD"
 MAIL_DEBUG = True
 
 # redis配置
@@ -36,7 +36,7 @@ REDIS_PORT = 6379
 
 # 七牛云配置
 ALLOWED_EXT=set(['png', 'jpg','jpeg','bmp','gif'])
-QINIU_ACCESS_KEY = "VimNicRPXX26IBrlzm8L0jfYZlW8hkDy7m6rI-Ik"
-QINIU_SECRET_KEY = "UT6U7JX6G2SrqecagTUh_lzFN--RB6lx6XzGGV6V"
+QINIU_ACCESS_KEY = "QINIU_ACCESS_KEY"
+QINIU_SECRET_KEY = "QINIU_SECRET_KEY"
 QINIU_BUCKET_NAME = 'tongjimall'
-QINIU_URL = "http://rvpkzi39r.hd-bkt.clouddn.com/"
+QINIU_URL = "QINIU_URL"
